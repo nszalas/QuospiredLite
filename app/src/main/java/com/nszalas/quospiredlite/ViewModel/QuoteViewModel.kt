@@ -1,10 +1,9 @@
-package com.nszalas.quospierdlite.ViewModel
+package com.nszalas.quospiredlite.ViewModel
 
 import androidx.lifecycle.*
 
-import com.nszalas.quospierdlite.Model.Quote
-import com.nszalas.quospierdlite.Model.QuoteRepository
-import kotlinx.coroutines.Dispatchers
+import com.nszalas.quospiredlite.Model.Quote
+import com.nszalas.quospiredlite.Model.QuoteRepository
 import kotlinx.coroutines.launch
 
 class QuoteViewModel(): ViewModel() {

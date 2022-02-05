@@ -1,10 +1,10 @@
-package com.nszalas.quospierdlite
+package com.nszalas.quospiredlite
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
 import androidx.lifecycle.ViewModelProvider
-import com.nszalas.quospierdlite.ViewModel.QuoteViewModel
+import com.nszalas.quospiredlite.ViewModel.QuoteViewModel
 
 
 class MainActivity : AppCompatActivity() {
@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
         viewModel = ViewModelProvider(this).get(QuoteViewModel::class.java)
         setContentView(R.layout.activity_main)
 
-        viewModel.all.observe(this, {findViewById<TextView>(R.id.textViewNow).text=it[1].toString()})
+        viewModel.all.observe(this, {findViewById<TextView>(R.id.textViewNow).text=it[4].toString()})
 
         viewModel.postAll()
     }

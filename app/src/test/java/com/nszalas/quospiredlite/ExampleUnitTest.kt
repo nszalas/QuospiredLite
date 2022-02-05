@@ -1,4 +1,4 @@
-package com.nszalas.quospierdlite
+package com.nszalas.quospiredlite
 
 import org.junit.Test
 

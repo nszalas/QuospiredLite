@@ -1,4 +1,4 @@
-package com.nszalas.quospierdlite.Model
+package com.nszalas.quospiredlite.Model
 
 import retrofit2.awaitResponse
 
