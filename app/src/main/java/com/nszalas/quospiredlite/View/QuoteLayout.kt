@@ -29,7 +29,7 @@ class QuoteLayout : Fragment() {
         viewModel = ViewModelProvider(this).get(QuoteViewModel::class.java)
 
 
-        var n = Random.nextInt(0, 1620)
+        var n = Random.nextInt(0, 1600)
 
         viewModel.all.observe(viewLifecycleOwner,{quote -> view.findViewById<TextView>(R.id.QuoteLayoutTextViewQuote).setText(quote[n].text.toString())})
         viewModel.all.observe(viewLifecycleOwner,{quote -> view.findViewById<TextView>(R.id.QuoteLayoutTextViewAuthor).setText(quote[n].author.toString())})
@@ -46,10 +46,10 @@ class QuoteLayout : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         view.findViewById<Button>(R.id.QuoteLayoutNextButton).setOnClickListener {
-            var n = Random.nextInt(0, 1600)
+            var z = Random.nextInt(0, 1600)
 
-            viewModel.all.observe(viewLifecycleOwner,{quote -> view.findViewById<TextView>(R.id.QuoteLayoutTextViewQuote).setText(quote[n].text.toString())})
-            viewModel.all.observe(viewLifecycleOwner,{quote -> view.findViewById<TextView>(R.id.QuoteLayoutTextViewAuthor).setText(quote[n].author.toString())})
+            viewModel.all.observe(viewLifecycleOwner,{quote -> view.findViewById<TextView>(R.id.QuoteLayoutTextViewQuote).setText(quote[z].text.toString())})
+            viewModel.all.observe(viewLifecycleOwner,{quote -> view.findViewById<TextView>(R.id.QuoteLayoutTextViewAuthor).setText(quote[z].author.toString())})
 
 
         }
