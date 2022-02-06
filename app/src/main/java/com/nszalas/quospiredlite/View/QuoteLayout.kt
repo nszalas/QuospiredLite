@@ -11,6 +11,7 @@ import androidx.navigation.fragment.navArgs
 import com.nszalas.quospiredlite.R
 import com.nszalas.quospiredlite.ViewModel.QuoteViewModel
 import kotlinx.android.synthetic.main.fragment_quote_layout.view.*
+import kotlin.random.Random
 
 class QuoteLayout : Fragment() {
 
@@ -26,11 +27,16 @@ class QuoteLayout : Fragment() {
 
         viewModel = ViewModelProvider(this).get(QuoteViewModel::class.java)
 
-        viewModel.all.observe(viewLifecycleOwner,{quote -> view.findViewById<TextView>(R.id.QuoteLayoutTextViewQuote).setText("ja")})
+
+        //probujemy random
+        var n = Random.nextInt(0, 1620)
+
+        viewModel.all.observe(viewLifecycleOwner,{quote -> view.findViewById<TextView>(R.id.QuoteLayoutTextViewQuote).setText(quote[n].text.toString())})
+        viewModel.all.observe(viewLifecycleOwner,{quote -> view.findViewById<TextView>(R.id.QuoteLayoutTextViewAuthor).setText(quote[n].author.toString())})
 
         viewModel.postAll()
 
-        //binding.button.setOnClickListener { viewModel.getWeather(view.findViewById<SearchView>(R.id.searchView).getQuery().toString())
+        
 
 
         return view
