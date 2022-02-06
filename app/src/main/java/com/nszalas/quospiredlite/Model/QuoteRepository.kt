@@ -9,5 +9,7 @@ class QuoteRepository {
         suspend fun getAll(): List<Quote>?{
             return RetrofitInstance.api.getAll().awaitResponse().body()
         }
+
+
     }
 }

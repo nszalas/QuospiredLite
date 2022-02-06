@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/welcomeScreen">
+
+    <fragment
+        android:id="@+id/welcomeScreen"
+        android:name="com.nszalas.quospiredlite.View.WelcomeScreen"
+        android:label="fragment_welcome_screen"
+        tools:layout="@layout/fragment_welcome_screen" >
+        <action
+            android:id="@+id/action_welcomeScreen_to_quoteLayout"
+            app:destination="@id/quoteLayout" />
+        <action
+            android:id="@+id/action_welcomeScreen_to_blankFragment"
+            app:destination="@id/blankFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/quoteLayout"
+        android:name="com.nszalas.quospiredlite.View.QuoteLayout"
+        android:label="fragment_quote_layout"
+        tools:layout="@layout/fragment_quote_layout" />
+    <fragment
+        android:id="@+id/blankFragment"
+        android:name="com.nszalas.quospiredlite.BlankFragment"
+        android:label="fragment_blank"
+        tools:layout="@layout/fragment_blank" />
+</navigation>
