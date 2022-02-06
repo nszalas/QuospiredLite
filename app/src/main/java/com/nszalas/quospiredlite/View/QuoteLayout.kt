@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.TextView
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.navArgs
@@ -28,7 +29,6 @@ class QuoteLayout : Fragment() {
         viewModel = ViewModelProvider(this).get(QuoteViewModel::class.java)
 
 
-        //probujemy random
         var n = Random.nextInt(0, 1620)
 
         viewModel.all.observe(viewLifecycleOwner,{quote -> view.findViewById<TextView>(R.id.QuoteLayoutTextViewQuote).setText(quote[n].text.toString())})
@@ -36,10 +36,24 @@ class QuoteLayout : Fragment() {
 
         viewModel.postAll()
 
-        
 
 
         return view
+    }
+
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        view.findViewById<Button>(R.id.QuoteLayoutNextButton).setOnClickListener {
+            var n = Random.nextInt(0, 1600)
+
+            viewModel.all.observe(viewLifecycleOwner,{quote -> view.findViewById<TextView>(R.id.QuoteLayoutTextViewQuote).setText(quote[n].text.toString())})
+            viewModel.all.observe(viewLifecycleOwner,{quote -> view.findViewById<TextView>(R.id.QuoteLayoutTextViewAuthor).setText(quote[n].author.toString())})
+
+
+        }
+
     }
 
 
