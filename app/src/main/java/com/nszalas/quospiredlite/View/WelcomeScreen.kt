@@ -16,18 +16,15 @@ class WelcomeScreen : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
+        // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_welcome_screen, container, false)
+
+        view.findViewById<Button>(R.id.WelcomeScreenDrawQuoteButton).setOnClickListener {
+            view.findNavController().navigate(R.id.action_welcomeScreen_to_quoteLayout)
+        }
+
         return view
     }
-
-    /*override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
-        view.findViewById<Button>(R.id.WelcomeScreenDrawQuote).setOnClickListener {
-            view.findNavController().navigate(activity, R.id.action_welcomeScreen_to_blankFragment)
-        }
-    }*/
 
 
 }

@@ -6,6 +6,11 @@
     app:startDestination="@id/welcomeScreen">
 
     <fragment
+        android:id="@+id/quoteLayout"
+        android:name="com.nszalas.quospiredlite.View.QuoteLayout"
+        android:label="fragment_quote_layout"
+        tools:layout="@layout/fragment_quote_layout" />
+    <fragment
         android:id="@+id/welcomeScreen"
         android:name="com.nszalas.quospiredlite.View.WelcomeScreen"
         android:label="fragment_welcome_screen"
@@ -14,9 +19,4 @@
             android:id="@+id/action_welcomeScreen_to_quoteLayout"
             app:destination="@id/quoteLayout" />
     </fragment>
-    <fragment
-        android:id="@+id/quoteLayout"
-        android:name="com.nszalas.quospiredlite.View.QuoteLayout"
-        android:label="fragment_quote_layout"
-        tools:layout="@layout/fragment_quote_layout" />
 </navigation>
