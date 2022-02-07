@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/back123"
     tools:context="View.WelcomeScreen">
 
 
@@ -12,9 +13,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="95dp"
+        android:layout_marginTop="60dp"
+        android:fontFamily="@font/rochester"
         android:text="Quospired"
-        android:textSize="65dp"
+        android:textColor="@color/black"
+        android:textSize="80dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -22,20 +25,21 @@
         android:id="@+id/WelcomeScreenDrawQuoteButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="150dp"
-        android:text="Draw"
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="100dp"
+        android:text="Get your Quote"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="220dp"
-        android:layout_marginEnd="50dp"
+        android:id="@+id/imageView2"
+        android:layout_width="228dp"
+        android:layout_height="462dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="15dp"
+        android:src="@drawable/logo34"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:src="@tools:sample/avatars" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
