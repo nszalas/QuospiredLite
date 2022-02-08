@@ -13,15 +13,18 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        lateinit var viewModel: QuoteViewModel
+        //lateinit var viewModel: QuoteViewModel
+
+        Thread.sleep(2000)
+        setTheme(R.style.Theme_QuospiredLite)
 
         setContentView(R.layout.activity_main)
 
-        viewModel = ViewModelProvider(this).get(QuoteViewModel::class.java)
+        //viewModel = ViewModelProvider(this).get(QuoteViewModel::class.java)
 
         //viewModel.all.observe(this, {findViewById<TextView>(R.id.textViewNow).text=it[75].toString()})
 
-        viewModel.postAll()
+        //viewModel.postAll()
 
     }
 }
